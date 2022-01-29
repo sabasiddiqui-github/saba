@@ -1,0 +1,22 @@
+<div class="container">
+  <div class = "jumbotron bg-white text-center">
+    <br>
+    <h1 class="display-3 font-weight-bold text-dark">CovTrac: Covid-19 Tracker</h1>
+    <h5 class="font-weight-bold text-secondary">Showing Countrywide Statistics</h5>
+  </div>
+  <app-select-bar [data]="countries"></app-select-bar>
+  <hr>
+  <app-dashboard [scope]="'Pass country name here'" [data]="{
+    date: '17-01-2022',
+    country: 'Pakistan',
+    confirmed: 654873,
+    recovered: 75698,
+    deaths: 757
+  }"></app-dashboard>
+
+  <hr>
+  <div class="row">
+    <app-datewise-table  [data]="countryData[countryData.length - 2]"></app-datewise-table>
+    <app-google-chart class="col-sm-6"></app-google-chart>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<body>
+  <div class="container">
+    <div class = "jumbotron bg-white text-center">
+      <br>
+      <h1 class="display-3 font-weight-bold text-dark">CovTrac: Covid-19 Tracker</h1>
+      <h5 class="font-weight-bold text-secondary">Showing Worldwide Statistics</h5>
+      <hr class="my-4">
+    </div>
+    <app-dashboard [scope]="'worldwide'" [data]="globalData[globalData.length - 2]"></app-dashboard>
+    <hr>
+    <div class = "row">
+      <app-bar-graph class="col-sm-6"></app-bar-graph>
+      <app-pie-chart class="col-sm-6"></app-pie-chart>
+    </div>
+  </div>
+</body>
